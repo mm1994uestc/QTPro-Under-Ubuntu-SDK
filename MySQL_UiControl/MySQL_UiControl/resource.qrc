@@ -1,0 +1,6 @@
+<RCC>
+    <qresource prefix="/">
+        <file>MySQL0.jpg</file>
+        <file>MySQL1.jpg</file>
+    </qresource>
+</RCC>
