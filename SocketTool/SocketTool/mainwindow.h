@@ -4,6 +4,10 @@
 #include <QMainWindow>
 
 #include <QtNetwork>
+#include <QTcpServer>
+#include <QTcpSocket>
+
+#include <QTimer>
 
 namespace Ui {
 class MainWindow;
@@ -24,6 +28,10 @@ private slots:
 
     void Client_Recieve_Data(void);
 
+    void accepConnection(void);
+
+    void readClient(void);
+
     void on_Client_Clear_clicked(bool checked);
 
     void on_Server_Clear_clicked(bool checked);
@@ -32,11 +40,17 @@ private slots:
 
     void on_Server_Button_clicked(bool checked);
 
+    void TimeOutProcess(void);
+
 private:
     Ui::MainWindow *ui;
 
     QTcpSocket *client;
-    QTcpSocket *server;
+
+    QTcpServer *server;
+    QTcpSocket *client_connect;
+
+    QTimer *TimeMonitor;
 
     bool ClientFlag = false;
     bool ServerFlag = false;

@@ -62,7 +62,7 @@ public:
     {
         if (MainWindow->objectName().isEmpty())
             MainWindow->setObjectName(QStringLiteral("MainWindow"));
-        MainWindow->resize(418, 553);
+        MainWindow->resize(425, 553);
         centralWidget = new QWidget(MainWindow);
         centralWidget->setObjectName(QStringLiteral("centralWidget"));
         IP_Address = new QLineEdit(centralWidget);
@@ -106,7 +106,7 @@ public:
         Client_Port->setGeometry(QRect(200, 140, 51, 27));
         Client_Button = new QPushButton(centralWidget);
         Client_Button->setObjectName(QStringLiteral("Client_Button"));
-        Client_Button->setGeometry(QRect(260, 140, 141, 27));
+        Client_Button->setGeometry(QRect(260, 140, 151, 27));
         label = new QLabel(centralWidget);
         label->setObjectName(QStringLiteral("label"));
         label->setGeometry(QRect(10, 130, 21, 41));
@@ -121,7 +121,7 @@ public:
         label_3->setGeometry(QRect(10, 310, 51, 41));
         Server_Button = new QPushButton(centralWidget);
         Server_Button->setObjectName(QStringLiteral("Server_Button"));
-        Server_Button->setGeometry(QRect(120, 320, 141, 27));
+        Server_Button->setGeometry(QRect(120, 320, 161, 27));
         label_7 = new QLabel(centralWidget);
         label_7->setObjectName(QStringLiteral("label_7"));
         label_7->setGeometry(QRect(10, 170, 151, 41));
@@ -164,7 +164,7 @@ public:
         MainWindow->setCentralWidget(centralWidget);
         menuBar = new QMenuBar(MainWindow);
         menuBar->setObjectName(QStringLiteral("menuBar"));
-        menuBar->setGeometry(QRect(0, 0, 418, 25));
+        menuBar->setGeometry(QRect(0, 0, 425, 25));
         MainWindow->setMenuBar(menuBar);
         mainToolBar = new QToolBar(MainWindow);
         mainToolBar->setObjectName(QStringLiteral("mainToolBar"));
