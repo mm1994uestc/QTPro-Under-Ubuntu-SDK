@@ -18,6 +18,11 @@ MainWindow::MainWindow(QWidget *parent) :
     TimeMonitor->setInterval(1000);
     TimeMonitor->start();
 
+    QPixmap pixmap;
+
+    pixmap = QPixmap(":/new/prefix1/socket.jpg");
+    this->ui->Corver->setPixmap(pixmap.scaled(this->ui->Corver->size()));
+
     connect(this->ui->Client_Button,SIGNAL(clicked(bool)),this,SLOT(on_Client_Button_clicked()));
     connect(this->ui->pushButton,SIGNAL(clicked(bool)),this,SLOT(on_pushButton_clicked()));
 
