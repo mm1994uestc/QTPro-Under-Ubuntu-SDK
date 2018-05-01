@@ -30,7 +30,24 @@ void MainWindow::on_TextDraw_clicked(bool checked)
     ypos = this->ui->Y_Pos->toPlainText().toInt();
 
     qDebug() << "Content:" << str << "X,Y:" << xpos << "," << ypos;
-    ImageWindow *image = new ImageWindow(Paint_Wid, Paint_Hei, xpos, ypos, str);
+
+    int x1,y1,x2,y2;
+
+    x1 = this->ui->X_Pos_2->toPlainText().toInt();
+    x2 = this->ui->X_Pos_3->toPlainText().toInt();
+    y1 = this->ui->Y_Pos_2->toPlainText().toInt();
+    y2 = this->ui->Y_Pos_3->toPlainText().toInt();
+
+    int Rect_x,Rect_y,Rect_w,Rect_h;
+
+    Rect_x = this->ui->X_Pos_11->toPlainText().toInt();
+    Rect_y = this->ui->Y_Pos_11->toPlainText().toInt();
+    Rect_w = this->ui->X_Pos_12->toPlainText().toInt();
+    Rect_h = this->ui->Y_Pos_12->toPlainText().toInt();
+
+    int Rect[] = {Rect_x,Rect_y,Rect_w,Rect_h};
+
+    ImageWindow *image = new ImageWindow(Paint_Wid, Paint_Hei, xpos, ypos, str,x1,y1,x2,y2,Rect);
     image->show();
 }
 

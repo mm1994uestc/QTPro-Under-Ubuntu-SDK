@@ -11,7 +11,7 @@ class ImageWindow : public QWidget
 
 public:
 
-    ImageWindow(int width, int height, int str_x, int str_y, QString str);
+    ImageWindow(int width, int height, int str_x, int str_y, QString str, int Line_x1,int Line_y1, int Line_x2, int Line_y2, int *Rect_param);
 
     ~ImageWindow();
 
@@ -26,6 +26,13 @@ private:
     int x;
     int y;
     QString str;
+
+    int Line_x1;
+    int Line_y1;
+    int Line_x2;
+    int Line_y2;
+
+    int Rect_param[4];
 };
 
 #endif // IMAGEWINDOW
